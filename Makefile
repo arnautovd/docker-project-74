@@ -1,4 +1,4 @@
-setup: install db-migrate
+setup: install
 
 install:
 	pnpm install
@@ -33,3 +33,12 @@ lint-fix:
 
 test:
 	NODE_ENV=test pnpm --silent test
+
+compose-setup:
+	docker compose run --rm app make setup
+
+compose-test:
+	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+
+compose-up:
+	docker compose up
