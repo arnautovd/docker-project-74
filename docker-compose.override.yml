@@ -1,5 +1,6 @@
 services:
   app:
+    image: dianaarnautova/docker-project-74
     build:
       context: .
       dockerfile: Dockerfile

@@ -1,6 +1,6 @@
 services:
   app:
-    image: arnautovd/docker-project-74
+    image: dianaarnautova/docker-project-74
     build:
       context: .
       dockerfile: Dockerfile.production
