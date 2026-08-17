@@ -2,6 +2,7 @@
 
 [![Main](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml/badge.svg)](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml)
 [![Hexlet tests and linter status](https://github.com/arnautovd/docker-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/arnautovd/docker-project-74/actions)
+[![Test and publish Docker image](https://github.com/arnautovd/docker-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/arnautovd/docker-project-74/actions/workflows/push.yml)
 
 ## Зачем это нужно
 
