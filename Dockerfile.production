@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Keep dependency metadata in a separate layer for better build caching.
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY app/package.json app/pnpm-lock.yaml app/pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 
-COPY . .
+COPY app .
 
 EXPOSE 8080
 ENV NODE_ENV=production

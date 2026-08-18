@@ -1,6 +1,12 @@
-node_modules
-.pnpm-store
-dist
-*.sqlite
+app/node_modules
+app/.pnpm-store
+app/dist
+app/*.sqlite
+app/.env
 .env
 .git
+.github
+services
+Dockerfile*
+docker-compose*.yml
+Makefile

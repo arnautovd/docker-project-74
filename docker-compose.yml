@@ -18,7 +18,7 @@ services:
     working_dir: /app
     command: make test
     env_file:
-      - .env
+      - ./app/.env
     depends_on:
       db:
         condition: service_healthy
