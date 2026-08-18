@@ -3,9 +3,6 @@ setup: install
 install:
 	pnpm install
 
-db-migrate:
-	pnpm run migrate
-
 build:
 	pnpm run build
 
@@ -37,10 +34,10 @@ test:
 compose-setup:
 	docker compose run --rm app make setup
 
-compose-test:
+compose-test: prepare-env
 	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
-ci:
+ci: prepare-env
 	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 compose-up:

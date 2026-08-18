@@ -14,16 +14,48 @@
 развернуть. Отсюда и две базы: sqlite по умолчанию, чтобы запускалось без
 внешних сервисов, и PostgreSQL для деплоя.
 
-## Requirement
+## Requirements
 
-* NodeJS v26
-* Sqlite (по умолчанию) или PostgreSQL
+* Node.js v26
+* pnpm v11
+* Docker and Docker Compose (for the containerized setup)
+* SQLite (default local database) or PostgreSQL
 
 ## Commands
 
 ```bash
 make install
 make dev
+```
+
+Open the application at `http://localhost:8080`.
+
+The Docker Compose setup starts PostgreSQL, the application, and Caddy:
+
+```bash
+make prepare-env
+docker compose up
+```
+
+Open `https://localhost` in a browser. Caddy uses a local self-signed
+certificate, so the browser may show a certificate warning on first access.
+
+The production image is published as
+[`dianaarnautova/docker-project-74`](https://hub.docker.com/r/dianaarnautova/docker-project-74).
+
+## Tests
+
+Run the linter, formatting check, and application tests locally:
+
+```bash
+make lint
+make test
+```
+
+Run the tests inside the production Docker image with PostgreSQL:
+
+```bash
+make ci
 ```
 
 ## Database
