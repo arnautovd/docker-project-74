@@ -1,0 +1,13 @@
+localhost {
+  log {
+    format json
+  }
+
+  # Compress responses.
+  encode zstd
+  # Use a self-signed certificate for local HTTPS.
+  tls internal
+
+  # Proxy all requests to the app service.
+  reverse_proxy /* app:8080
+}
