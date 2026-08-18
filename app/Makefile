@@ -1,6 +1,7 @@
 setup: install
 
 install:
+	npm install -g pnpm@11.20.0
 	pnpm install
 
 build:
